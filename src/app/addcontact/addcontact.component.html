@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Angular App</title>
+  <link rel="stylesheet" href="addcontact.component.css">
+</head>
+<div class="outer">
+  <h1>Add contact details</h1>
+  <div class="inner input-container">
+    <label for="firstName">First name:</label>
+    <input
+      type="text"
+      id="firstName"
+      [(ngModel)]="inputValueFirstName"
+      placeholder="First name"
+      
+    />
+    <label for="lastName">Last name:</label>
+    <input
+      type="text"
+      id="lastName"
+      [(ngModel)]="inputValueLastName"
+      placeholder="Last name"
+      
+    />
+  </div>
+  <div class="inner input-container">
+    <label for="telephone">Telephone:</label>
+    <input
+      type="text"
+      id="telephone"
+      [(ngModel)]="inputValueTelephone"
+      placeholder="Telephone"
+      
+    />
+    <label for="mobile">Mobile:</label>
+    <input
+      type="text"
+      id="mobile"
+      [(ngModel)]="inputValueMobile"
+      placeholder="Mobile"
+      
+    />
+  </div>
+  <div class="inner input-container">
+    <label for="email">Email:</label>
+    <input
+      type="text"
+      id="email"
+      [(ngModel)]="inputValueEmail"
+      placeholder="Email"
+    />
+    <label for="dob">Date of Birth:</label>
+    <input
+      type="date"
+      id="dob"
+      [(ngModel)]="inputValueDob"
+    />
+  </div>
+  <div class="inner three">
+    <div class="image">
+      <label for="image">Attach file:</label>
+      <input
+        type="file"
+        id="image"
+        (change)="onImageChange($event)"
+      />
+      <ng-container *ngIf="inputValueImage">
+        <label class="photo-label">Photo:</label>
+      </ng-container>
+      <img *ngIf="inputValueImage" [src]="inputValueImage" alt="Selected Image" width="300" />
+    </div>
+      <div class="drop">
+      <label for="dropdown">Channel:</label>
+      <select id="dropdown" [(ngModel)]="selectedDropdownValue">
+        <option value="option1">Skype</option>
+        <option value="option2">Telegram</option>
+        <option value="option3">Twitter</option>
+      </select>
+    </div>
+    <div class="smallinput">
+    <label>Enter your ID:</label>
+      <input
+      type="text"
+      id="idone"
+      placeholder="ID"
+    />
+    <input
+      type="text"
+      id="idtwo"
+      placeholder="ID"
+    />
+    </div>
+    <label for="notes">Notes:</label>
+  </div>
+  <div class="inner input-container">
+    <textarea
+      id="notes"
+      [(ngModel)]="inputValueNotes"
+      placeholder="Enter your notes"
+      rows="4"
+    ></textarea>
+  </div>
+  <div class="button-container">
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+  
+

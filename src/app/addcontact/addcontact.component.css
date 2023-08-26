@@ -1,0 +1,95 @@
+.input-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-top: 2%;
+    font-size: large;
+  }
+  .outer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between; /* Distribute content space between elements */
+    align-items: center;
+    margin: 1%;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  label {
+    margin-right: 20px;
+    width: 120px;
+  }
+  input {
+    height: 30px;
+    border-radius: 7px;
+    width: 35%;
+    margin-right: 3%;
+  }
+  h1{
+    margin-top: 7%;
+  }
+  button {
+    height: 40px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 10px;
+    background-color: #a8a8a8; 
+    transition: background-color 0.2s ease-in-out; 
+    cursor: pointer;
+    border: none;
+    margin-right: 4%;
+  }
+  button:hover {
+    background-color: #123558;
+    color: white;
+  }
+  .photo-label {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.image input,
+.image img {
+  margin-top: 20px; /* Add vertical spacing between the components */
+}
+.drop{
+  display: flex;
+  margin-top: 0%;
+}
+select{
+  padding: 5px; /* Add padding to the select element */
+  font-size: 16px; /* Increase the font size */
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 50%;
+}
+.three{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  gap: 10px;
+  font-size: large;
+  align-items: flex-start;
+}
+.smallinput{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+textarea{
+  width: 50%;
+}
+.non-editable {
+  background-color: #f0f0f0; /* or any other color you prefer */
+  pointer-events: none; /* Prevent interaction with the field */
+}

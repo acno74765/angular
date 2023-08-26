@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Angular App</title>
+  <link rel="stylesheet" href="book.component.css">
+</head>
+<div class="outer">
+<h1>Address Book</h1>
+<table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Telephone</th>
+        <th>Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of getDisplayedContacts(); let odd = odd" [ngClass]="{ 'even-row': odd }">
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+        <td>{{ contact.telephone }}</td>
+        <td>{{ contact.mobile }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <div class="page-numbers" *ngFor="let pageNumber of getPageNumbers()" [class.current-page]="pageNumber === currentPage" (click)="changePage(pageNumber)">
+      {{ pageNumber }}
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,49 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+h1{
+    margin-top: 7%;
+  }
+/* Center-align the table and set equal width for each column */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Apply alternate background color to even rows */
+.even-row {
+  background-color: #9c9c9c;
+}
+
+/* Apply border to cells */
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Remove border from first row (table header) */
+table th {
+  border: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.page-numbers {
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ccc; /* Add border style */
+  padding: 5px 10px; 
+}
+.current-page {
+  background-color: #38424d; /* Add a dark background color to the current page */
+  color: white; /* Set text color to white for better contrast */
+}

@@ -1,0 +1,25 @@
+
+  <div class="content">
+    <h1>Dashboard</h1>
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchTerm" (input)="updateFilteredContacts()" placeholder="Search by name" />
+    </div>
+    <div class="card-container b">
+      <div *ngFor="let contact of filteredContacts" class="carda">
+        <h4>{{ contact.firstName }} {{ contact.lastName }}</h4>
+        <div class="imageplace">
+          <div>
+        <p>{{ "this is subtitle" }}</p>
+        <p>{{ "this is desiption" }}</p>
+          </div>
+        <img *ngIf="contact.image" [src]="contact.image" alt="Contact Image" width="100" />
+        </div>
+        <p>{{ contact.notes }}</p>
+        <div class="links">
+          <a (click)="goToEditContact(contact)">Card link</a>
+          <a href="#">Contact link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
